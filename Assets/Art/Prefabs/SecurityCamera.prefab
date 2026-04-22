@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8158988744911358691}
   - component: {fileID: 2128508385179189398}
   m_Layer: 0
-  m_Name: Camera and light 3
+  m_Name: SecurityCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
