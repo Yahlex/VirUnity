@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FlashMonoBehavior : MonoBehaviour
+public class Flash : MonoBehaviour
 {
     public string itemName = "Flash";
     void OnTriggerEnter(Collider other)

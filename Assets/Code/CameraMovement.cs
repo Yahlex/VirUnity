@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraMovementMonoBehaviorScript : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     public GameObject target;
     public float speed = 10.0f;

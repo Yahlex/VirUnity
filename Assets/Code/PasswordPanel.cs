@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PasswordPanelMonoBehavior : MonoBehaviour
+public class PasswordPanel : MonoBehaviour
 {
     public string requiredItem = "Flash";
 
