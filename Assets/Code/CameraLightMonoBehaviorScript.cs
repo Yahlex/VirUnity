@@ -4,21 +4,26 @@ public class CameraLightMonoBehaviorScript : MonoBehaviour
 {
     public GameObject target;
     public float speed = 10.0f;
+    public float angleStart = -90f;
+    public float angleEnd = 90f;
+    public bool goingRight = true;
 
     private float t = 0f;
-    private bool goingRight = true;
 
     private Vector3 leftRotation;
     private Vector3 rightRotation;
 
     void Start()
     {
+        // setup light rotation
         if (target != null)
         {
             Vector3 current = target.transform.rotation.eulerAngles;
 
-            leftRotation = new Vector3(current.x, -90f, current.z);
-            rightRotation = new Vector3(current.x, 90f, current.z);
+            current.y = angleStart;
+
+            leftRotation = new Vector3(current.x, angleStart, current.z);
+            rightRotation = new Vector3(current.x, angleEnd, current.z);
 
             target.transform.rotation = Quaternion.Euler(leftRotation);
         }
