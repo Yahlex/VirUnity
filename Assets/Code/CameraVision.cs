@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class CameraVision : MonoBehaviour
 {
-    GameManager gameManager = FindFirstObjectByType<GameManager>();
+    private GameManager gameManager;
+    void Start()
+    {
+        gameManager = FindFirstObjectByType<GameManager>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
