@@ -40,6 +40,7 @@ public class ArmeNiveau1 : MonoBehaviour
         {
             _ramassee = true;
             Debug.Log("Arme ramassée : " + nomArme + " | Dégâts : " + degats);
+            ChatLog.Log("Arme ramassée : " + nomArme + " | Dégâts : " + degats);
 
             // Donne l'arme au joueur
             AttaqueJoueur attaque = other.GetComponentInParent<AttaqueJoueur>();

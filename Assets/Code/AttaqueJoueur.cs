@@ -29,6 +29,7 @@ public class AttaqueJoueur : MonoBehaviour
         cooldownActuel = cooldown;
         _armeEquipee = true;
         Debug.Log("Arme équipée : " + nom + " | Dégâts : " + degats);
+        ChatLog.Log("Arme équipée : " + nom + " | Dégâts : " + degats);
     }
 
     void Attaquer()
@@ -42,10 +43,12 @@ public class AttaqueJoueur : MonoBehaviour
         {
             proxy.PrendreDegats(degatsActuels);
             Debug.Log("Attaque ! " + armeActuelle + " inflige " + degatsActuels + " dégâts");
+            ChatLog.Log("Attaque ! " + armeActuelle + " inflige " + degatsActuels + " dégâts");
         }
         else
         {
             Debug.Log("Trop loin pour attaquer !");
+            ChatLog.Log("Trop loin pour attaquer !");
         }
     }
 }

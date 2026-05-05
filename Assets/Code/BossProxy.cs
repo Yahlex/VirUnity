@@ -81,6 +81,7 @@ public class BossProxy : MonoBehaviour
         {
             palierActuel++;
             Debug.Log("Palier dégâts : " + palierActuel);
+            ChatLog.Log("Palier dégâts : " + palierActuel);
             _timerEscalade = tempsEscalade;
         }
     }
@@ -130,12 +131,14 @@ public class BossProxy : MonoBehaviour
         float degats = degatsDeBase * (1 + palierActuel);
         _vieJoueur.PrendreDegats(degats);
         Debug.Log("Proxy attaque ! Dégâts : " + degats + " | Palier : " + palierActuel);
+        ChatLog.Log("Proxy attaque ! Dégâts : " + degats + " | Palier : " + palierActuel);
     }
 
     public void PrendreDegats(float degats)
     {
         vieActuelle -= degats;
         Debug.Log("Proxy vie : " + vieActuelle);
+        ChatLog.Log("Proxy vie : " + vieActuelle);
         if (vieActuelle <= 0)
             Mourir();
     }
@@ -143,6 +146,7 @@ public class BossProxy : MonoBehaviour
     void Mourir()
     {
         Debug.Log("Proxy vaincu ! Niveau terminé !");
+        ChatLog.Log("Proxy vaincu ! Niveau terminé !");
         Destroy(gameObject);
     }
 }

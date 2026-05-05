@@ -21,6 +21,7 @@ public class VieJoueur : MonoBehaviour
     {
         vieActuelle -= degats;
         Debug.Log("Vie joueur : " + vieActuelle);
+        ChatLog.Log("Vie joueur : " + vieActuelle);
 
         if (vieActuelle <= 0)
         {
@@ -29,11 +30,11 @@ public class VieJoueur : MonoBehaviour
     }
 
     void Mourir()
-    {
-        Debug.Log("Game Over !");
-        // Pour l'instant on recharge la scène
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-        );
-    }
+{
+    Debug.Log("Game Over !");
+    ChatLog.Log("Game Over !");
+    GestionNiveau1 gestion = FindFirstObjectByType<GestionNiveau1>();
+    if (gestion != null)
+        gestion.Defaite();
+}
 }
