@@ -562,13 +562,14 @@ GameObject:
   - component: {fileID: 53355347}
   - component: {fileID: 53355349}
   - component: {fileID: 53355348}
+  - component: {fileID: 53355350}
   m_Layer: 0
   m_Name: USBicon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &53355347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -583,10 +584,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1506844461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53355348
 MonoBehaviour:
@@ -608,7 +609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b9846b73663172e41b87f6e315678f14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -626,6 +627,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53355346}
   m_CullTransparentMesh: 1
+--- !u!114 &53355350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53355346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f0567916b918647ab629ba0a9cfcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
+  usbIcon: {fileID: 53355346}
 --- !u!1001 &54721031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15117,8 +15131,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.2984156
-  m_Center: {x: -0.1653465, y: 0.000000029802322, z: 0.00000047683716}
+  m_Radius: 0.32584617
+  m_Center: {x: -0.1653465, y: 0.027430624, z: 0.00000047683716}
 --- !u!114 &1623967398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15131,6 +15145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c20cad5523024f966be8d34e2794b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PasswordPanelMonoBehavior
+  gameManager: {fileID: 820822898}
   requiredItem: Flash
 --- !u!1 &1628844248
 GameObject:
@@ -16754,6 +16769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ce2b68674a3ad46a0f27863f4c4c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  ui: {fileID: 53355350}
   items: []
 --- !u!1001 &1813512781
 PrefabInstance:
