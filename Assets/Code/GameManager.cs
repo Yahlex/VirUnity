@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void YouWon ()
+    {
+        SceneManager.LoadScene("You_won_scene");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void Quit()
     {
 

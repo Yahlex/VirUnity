@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PasswordPanel : MonoBehaviour
 {
+    public GameManager gameManager;
     public string requiredItem = "Flash";
 
     void OnTriggerEnter(Collider other)
@@ -17,7 +18,7 @@ public class PasswordPanel : MonoBehaviour
                 if (inventory.HasItem(requiredItem))
                 {
                     Debug.Log("Accès autorisé");
-                    //Faire afficher panneau de fin de jeu
+                    gameManager.YouWon();
                 }
                 else
                 {
