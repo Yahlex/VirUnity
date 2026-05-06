@@ -12,22 +12,35 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Rejouer avec la touche R
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Rejouer");
+            SceneManager.LoadScene("Scene_2");
+        }
+
+        // Quitter le jeu avec la touche Q
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Quitter");
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
     }
 
     public void GameOver ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Game_over_scene");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit()
     {
-        Debug.Log("Quitter le jeu");
 
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #else
-        Application.Quit();
-        #endif
+        
     }
 }
