@@ -65,6 +65,6 @@ public class GestionNiveau1 : MonoBehaviour
     {
         Time.timeScale = 1f;
         // Charge la scène suivante (niveau 2 de Lola)
-        SceneManager.LoadScene("Scene_2");
+        SceneManager.LoadScene("Intro_scene_2");
     }
 }
